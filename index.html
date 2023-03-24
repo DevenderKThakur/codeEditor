@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CodeIDE by @Devender</title>
+</head>
+<body>
+    <section>
+        <ul>
+            <li>Home</li>
+            <li>About Me</li>
+            <li>Contact Me</li>
+        </ul>
+    </section>
+    <main>
+<!-- the code will be written here -->
+        <div class="top">
+          <label>Html😁</i></label>
+          <textarea  id="html_code" onkeyup="run()"></textarea>
+
+          <label>Css😁</label>
+          <textarea  id="css_code" onkeyup="run()"></textarea>
+
+          <label>JavaScript😁</label>
+          <textarea  id="js_code"onkeyup="run()"></textarea>
+        </div>
+<!-- output will be display here -->
+        <div class="bottom">
+            <label>Output😁</label>
+           <iframe id="output"></iframe>
+        </div>
+    </main>
+    <footer>
+          <div class="footer-content">
+            <br>
+            <h3 style="font-size: 30px;">&#169;Devender Kumar Thakur</h3>
+            <br>
+            <p>This is a codeEditor created by Front-End Developer Devender Kumar Thakur for Html Css & javascript .</p>
+            <p>Hope that you would like It!</p> <br> 
+            <a href = "mailto:tdevender422@gmail.com">Send Email</a>  
+            <a href="https://github.com/DevenderKThakur" target="_blank">Git Hub</a>
+          </div>
+    </footer>
+</body>
+<script>
+  function run(){
+    let htmlCode = document.getElementById("html_code").value;
+    let cssCode = document.getElementById("css_code").value;
+    let jsCode = document.getElementById("js_code").value;
+    let output = document.getElementById("output");
+    output.contentDocument.body.innerHTML =  htmlCode + "<style>"+cssCode+"<style>";
+    output.contentWindow.eval(jsCode);
+  }
+</script>
+</html>
